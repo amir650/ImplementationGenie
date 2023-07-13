@@ -23,7 +23,7 @@ def build_knowledge_index(directory_path):
     return idx
 
 
-index = build_knowledge_index('knowledge')
+index = build_knowledge_index('data')
 chat_engine = index.as_chat_engine(
     chat_mode=ChatMode.CONDENSE_QUESTION,
     verbose=True
@@ -37,7 +37,7 @@ col1, col2, col3 = st.columns([1, 2, 1])
 col1.markdown(' # Welcome to my app! ')
 col1.markdown(" Here is some info on the app.  ")
 
-col2.file_uploader("upload a knowledge file")
+col2.file_uploader("upload a data file")
 
 #st.set_page_config(page_title='Ava Hoozy', page_icon=':tada:', layout='wide')
 #st.subheader('hi bros')
